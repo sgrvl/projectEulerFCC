@@ -1,5 +1,5 @@
-function largestPrimeFactor(number) {
-  function isPrime(n) {
+const largestPrimeFactor = (number) => {  
+  const isPrime = (n) => {
     for(let i = 2; i < n; i++) {
       if(n % i == 0) return false;
     }
@@ -7,10 +7,11 @@ function largestPrimeFactor(number) {
   }
   const arr = [];
   for(let i = 2; i <= number; i++) {
-    if(isPrime(i) && number % i == 0) arr.push(i)
+    if(isPrime(i) && number % i == 0) {
+      arr.push(i);
+      number = number/i;
+    }
   }
 
   return arr[arr.length - 1];
 }
-
-//this works but very resource intensize
