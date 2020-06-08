@@ -6,26 +6,11 @@ function largestPrimeFactor(number) {
     return true;
   }
   const arr = [];
-  for(let i = 2; i <= 50; i++) {
+  for(let i = 2; i <= number; i++) {
     if(isPrime(i) && number % i == 0) arr.push(i)
   }
-  return number.toString().length
-  //return arr[arr.length - 1];
+
+  return arr[arr.length - 1];
 }
 
-console.log(largestPrimeFactor(600851475143));
-/*
-
-for(let i = 2; i < num; i++)
-    if(num % i === 0)
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  */
+//this works but very resource intensize
