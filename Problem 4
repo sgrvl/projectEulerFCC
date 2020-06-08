@@ -17,5 +17,5 @@ const largestPalindromeProduct = (n) => {
 		}
 	}
 
-	return arr2.sort((a, b) => b - a).find(isPalindrome);
+	return arr2.sort((a, b) => b - a).find(isPalindrome); 
 };
