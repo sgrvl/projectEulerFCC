@@ -5,11 +5,12 @@ const largestPrimeFactor = (number) => {
     }
     return true;
   }
+  let factor = number;
   const arr = [];
-  for(let i = 2; i <= number; i++) {
-    if(isPrime(i) && number % i == 0) {
+  for(let i = 2; i <= factor; i++) {
+    if(isPrime(i) && factor % i == 0) {
       arr.push(i);
-      number = number/i;
+      factor = factor/i;
     }
   }
 
