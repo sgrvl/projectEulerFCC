@@ -1,0 +1,21 @@
+const largestPalindromeProduct = (n) => {
+	const startNum = parseInt(Array(n).fill(9).join(""));
+	const arr = [];
+	const arr2 = [];
+
+	const isPalindrome = (num) => {
+		num.toString() == num.toString().split("").reverse().join("");
+  };
+  
+	for (let i = startNum; i > 0; i--) {
+		arr.push(i);
+	}
+
+	for (let i = 0; i < startNum; i++) {
+		for (let j = 0; j < startNum; j++) {
+			arr2.push(arr[i] * arr[j]);
+		}
+	}
+
+	return arr2.sort((a, b) => b - a).find(isPalindrome);
+};
