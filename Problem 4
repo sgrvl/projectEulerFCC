@@ -5,7 +5,7 @@ const largestPalindromeProduct = (n) => {
 
 	const isPalindrome = (num) => {
 		num.toString() == num.toString().split("").reverse().join("");
-  };
+  	};
   
 	for (let i = startNum; i > 0; i--) {
 		arr.push(i);
