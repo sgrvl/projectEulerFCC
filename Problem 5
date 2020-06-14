@@ -1,0 +1,18 @@
+//Greatest common divisor
+const gcd = (a, b) => {
+	if (b == 0) return a;
+	else return gcd(b, a % b);
+};
+//lowest common divisor
+const lcd = (a, b) => {
+	return (a * b) / gcd(a, b);
+};
+const smallestMult = (n) => {
+	let temp = 1;
+	for (let i = 1; i <= n; i++) {
+		temp = lcd(temp, i);
+	}
+	return temp;
+};
+
+/* My original solution was a bruteforce and was not optimal, this is not mine */
