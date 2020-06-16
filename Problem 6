@@ -1,0 +1,25 @@
+const array = (n) => {
+	const arr = [];
+	for (let i = 1; i <= n; i++) {
+		arr.push(i);
+	}
+	return arr;
+};
+
+const sumOfSquares = (n) => {
+	return array(n)
+		.map((i) => Math.pow(i, 2))
+		.reduce((acc, curr) => acc + curr);
+};
+
+const squareOfSum = (n) => {
+	return Math.pow(
+		array(n).reduce((acc, curr) => acc + curr),
+		2
+	);
+};
+
+const sumSquareDifference = (n) => {
+	return squareOfSum(n) - sumOfSquares(n);
+};
+
