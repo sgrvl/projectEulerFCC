@@ -1,0 +1,10 @@
+const specialPythagoreanTriplet = (n) => {
+	for (let i = 1; i <= n; i++) {
+		for (let j = 1; j <= n - 1; j++) {
+			let c = n - i - j;
+			if (c ** 2 == i ** 2 + j ** 2) {
+				return c * i * j;
+			}
+		}
+	}
+};
