@@ -1,0 +1,28 @@
+const triangleNumber = (n) => {
+	let num = 0;
+	for (let i = 1; i <= n; i++) {
+		num += i;
+	}
+	return num;
+};
+
+const divisibleTriangleNumber = (n) => {
+	let j = 1;
+	while (true) {
+		let num = triangleNumber(j);
+		let div = [];
+		for (let i = 1; i <= num; i++) {
+			if (num % i == 0) {
+				div.push(i);
+			}
+		}
+		if (div.length - 1 == n) {
+			return num;
+		} else j++;
+	}
+
+	return null;
+};
+
+
+// not really complete.. only works for smaller numbers
